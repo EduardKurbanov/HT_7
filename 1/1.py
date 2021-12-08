@@ -63,7 +63,7 @@ def verification_password_login(username="", password=""):
             data[i["login"]] = i["password"]
         try:
             if username in data.keys():
-                if password in data.values():
+                if password == data[username]:
                     return True
                 else:
                     raise PasswordException(f"incorrect password -> {password}")
