@@ -126,7 +126,7 @@ def withdraw_balance(username: str):
     print("Balance: {0} USD".format(current_balance))  # for debug only
     entered_money = input("Enter amount : ")
     if entered_money.isdecimal():
-        if entered_money != 0 and entered_money <= current_balance:
+        if (int(entered_money) != 0) and (int(entered_money) <= int(current_balance)):
             new_balance = int(current_balance) - int(entered_money)
             print("Balance: {0} USD".format(new_balance))
 
